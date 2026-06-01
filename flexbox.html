@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+
+    <style>
+        /* Alterando o Box Model (padding, width, height, border) */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+
+        }
+
+        /* Regra de reset parcial */
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #222;
+            background-color: white;
+        }
+
+        nav {
+            background-color: rgb(214, 221, 228);
+            ;
+            border-block-end: solid 1px #222;
+            min-height: 80px;
+            position: sticky;
+            top: 0;
+
+            /* habilitando o modo flex */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            gap: 30px;
+
+            /* Sobre direção e eixos do flexbox a direção padrão é flex-direction: row. Nesse caso, justfy-content alinha os elemtos no eixo cross (vertical).
+            
+            Se invertermos a direção para colum (coluna) essa lógica também é invertida: justfy-content alinha os elemtntos verticalmente, e o aling-items alinhará os elementos horizontalmente. */
+
+            a {
+                text-decoration: none;
+                color: #222;
+                font-weight: bold;
+
+                &:hover,
+                &:focus {
+                    color: darkblue;
+                }
+            }
+        }
+
+        .hero {
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+            a {
+                text-decoration: none;
+                background-color: rgb(89, 100, 72);
+                color: white;
+                padding: 0.5rem;
+                border-radius: 8px;
+
+                &:hover, &:focus {
+                    background-color: rgb(11, 141, 11);
+                }
+            }
+        }
+
+        .banner {
+            background-color: rgb(253, 253, 103);
+            text-align: center;
+            padding: 1.2rem;
+            font-weight: bold;
+            border: solid 1px #222;
+            margin-block: 1rem;
+        }
+
+        .cards {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            gap: 1.2rem;
+            margin-block-end: 2rem;
+            height: 200px;
+
+            /* "Quebra" layout fazendo  com que se não houver espaço suficiente, os elementos irão para baixo. */
+            flex-wrap: wrap;
+
+            /* Alinha os itens de maneira agrupada (precisa ter espaço suficiente para isso) */
+            align-content: flex-start;
+        }
+
+        .card {
+            height: 175px;
+            width: 250px;
+            padding: 1rem;
+            background-color: rgb(245, 245, 245);
+            box-shadow: rgb(109, 109, 109) 0 0 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegação -->
+    <nav>
+        <a href="">Início</a>
+        <a href="">Cursos</a>
+        <a href="">Contatos</a>
+    </nav>
+
+    <!-- Seção chamada de destaque normalmente conhecida como "hero" contendo uma CTA (call to action) -->
+    <section class="hero">
+        <h1>Aprenda CSS do Zero</h1>
+        <p>Layouts modernos com Flexbox.</p>
+        <a href="">Matricule-se já!</a>
+    </section>
+
+    <!-- Banner publicitario -->
+    <div class="banner">
+        Promoção: 50% OFF hoje!
+    </div>
+
+    <!-- Cards (Cartões) de conteúdo -->
+    <main class="cards">
+        <article class="card">
+            <h2>HTML</h2>
+            <p>Estrutura páginas.</p>
+        </article>
+
+        <article class="card">
+            <h2>CSS</h2>
+            <p>Estilo, layout e animação.</p>
+        </article>
+
+        <article class="card">
+            <h2>JS</h2>
+            <p>Comportamento e interatividade.</p>
+        </article>
+    </main>
+</body>
+
+</html>

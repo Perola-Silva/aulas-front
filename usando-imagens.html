@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando imagens HTML</title>
+</head>
+
+<body>
+    <h1>Trabalhando com imagens</h1>
+    <hr>
+    <h2>Formatos mais comuns</h2>
+    <dl>
+        <dt>JPEG/JPG</dt>
+            <dd>Utilizado principalmente para fotos em geral com milhões de cores e compressão.</dd>
+        <dt>GIF</dt>
+            <dd>Voltado para desnhos/ilustrações de poucas cores. Suporta também animação e transparência</dd>
+        <dt>PNG</dt>
+            <dd>Usado também para fotos com milhões de cores, com compressão e também <b>suporte a transparência</b>.</dd>
+        <dt>WebP</dt>
+            <dd>Formato mais moderno, com suporte a milhões de cores, transparência e animação.</dd>
+        <dt>SVG</dt>
+            <dd>Formato vetorial, ou seja, não tem problemas com redimensionamento. Muito comum para uso de logotipos e desnhos.</dd>
+    </dl>
+
+    <hr>
+
+    <h2>Exemplos</h2>
+    <h3>Tags e atributos</h3>
+    <img src="imagens/TETO.webp" alt="TEOTETOTETOTEOTETOTETOTEOTETOTETOTEOTETOTETO" width="456" height="500">
+
+    <h3>Imagens dentro de outras Tags</h3>
+    <p>
+        <img src="imagens/logo-php.jpg" alt="Logotipo da linguagem php">
+    </p>
+    <div>
+        <img src="imagens/teto-boba.png" alt="Teto de pelucia">
+        <img src="imagens/teto-pequena.webp" alt="Teto de pelucia soq mais fofa">
+    </div>
+
+    <div><img src="imagens/teto-boba.png" alt=""></div>
+    <div><img src="imagens/teto-pequena.webp" alt=""></div>
+    <div><img src="imagens/TETO.webp" alt=""></div>
+
+    <hr>
+    <div>
+        <img src="imagens/teto-voicepeak-plushie.webp" alt="">
+        <img src="imagens/teto-v2-plushie.webp" alt="">
+    </div>
+    <!-- Havendo espaço fisico fica uma imagem ao lado da outra, quando o espaço acaba o layout "quebra" fazendo as imagens fiquem uma embaixo da outra :D -->
+
+    <hr>
+
+    <h3>Imagens ou ilustrações em geral com legendas</h3>
+
+    <figure>
+        <img src="imagens/miku.webp" alt="">
+        <figcaption>Uma pelucia da hatsune mikuu</figcaption>
+    </figure>
+
+    <figure>
+        <img src="imagens/logo-php.jpg" alt="">
+        <img src="imagens/logo-mysql.gif" alt="">
+        <figcaption>Tecnologias do Back-End</figcaption>
+    </figure>
+
+    <h4>Exemplo: tutorial de javascript</h4>
+    <figure>
+        <pre>
+            <code>(nota1, nota2) => (nota1 + nota2) / 2</code>
+        </pre>
+            <figcaption>
+                Função que recebe 2 parâmetros e realiza o calculo matematico de média
+            </figcaption>
+    </figure>
+
+    <hr>
+
+    <h3>Web vs JPEG</h3>
+
+    <img src="imagens/montanhas.jpg" alt="">
+    <img src="imagens/montanhas.webp" alt="">
+    <!-- Se possivel priorize o formato WebP por ser mais moderno e otimizado (melhor peso x qualidade), além de suportar transparencia e animação -->
+
+    <h3>Formato de vetor para a web</h3>
+    <img src="imagens/black-cat.png" alt="">
+    <img src="imagens/black-cat.svg" alt="">
+</body>
+
+</html>

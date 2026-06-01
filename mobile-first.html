@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: aliceblue;
+        }
+
+        span {
+            background-color: darkblue;
+            color: white;
+            padding: 2 px;
+        }
+
+        .container {
+            background-color: white;
+            width: 95%;
+            margin-inline: auto;
+            margin-block-start: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            color: darkblue;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        /* Etapa 06 */
+
+        /* Criando media quaries com breakpoints */
+        /* @media screen and (min-width: 450px) ou: */
+
+        @media (min-width: 450px) {
+            html {
+                font-size: 18px;
+            }
+
+            body {
+                background-color: darkblue;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .container {
+                max-width: 700px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.418);
+                padding: 1.5rem;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            span {
+                background-color: black;
+            }
+
+            h2 {
+                border-inline-start: solid 10px;
+                padding-inline-start: 1rem;
+            }
+        }
+
+        /* CONDICIONAL */
+        @media (min-width: 800px) {
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 10px;
+                padding: 0;
+
+                li {
+                    display: flex;
+                    background-color: burlywood;
+                    border-radius: 8px;
+                    text-align: center;
+                    border: solid black 1px;
+                    justify-content: space-between;
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Media Queries - <span>Mobile First</span></h1>
+        <h2>Conceito</h2>
+        <p>Media Queries são regras especiais em que criamos alterações na página de acordo com determinadas condições
+            (exemplo: tamanho da tela).</p>
+        <p>Essas alteraçoes ocorrem coma a configuração de <b>breakpoints</b>.</p>
+        <p>As midia queries são aplicadas de acordo com a estrategia usada para desing responssivo, podendo ser:</p>
+
+        <ul>
+            <li><b>Mobile First:</b>Do pequeno para o grande</li>
+            <li><b>Desktop First:</b>Do grande para o pequeno</li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: beige;
+        }
+
+        /* Seletor id usa #nome */
+        #container {
+            border: dashed 2px #999;
+            margin-block-end: 20px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .caixa {
+            background-color: rgb(38, 110, 243);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            margin-block-end: 10px;
+        }
+
+        .exemplo-pixels {
+            width: 250px;
+            /* Piexl: Unidade fixa, ou absoluta. Ou seja o valor NÃO MUDA de acordo com a tela, valor fixo. */
+        }
+
+        .exemplo-porcentagem {
+            width: 50%;
+            /* Porcentagem: Unidade RELATIVA/VARIÁVEL. O valor muda de acordo com o elemento pai. */
+        }
+
+        .exemplo-REM {
+            width: 20rem;
+            /* REM: Unidade RELATIVA/VARIÁVEL de acordo com o font-size do elemento RAIZ/ROOT. */
+        }
+
+        .exemplo-VW {
+            width: 50vw;
+            /* VW (Viewport Width): Unidade RELATIVA/VARIÁVEL de acordo com a largura da Viewport (área útil do navegador). */
+        }
+
+        .exemplo-VH {
+            height: 10vh;
+            /* VH (Viewport Height): Unidade RELATIVA/VARIÁVEL de acordo com a altura da Viewport (área útil do navegador) */
+        }
+
+        .exemplo-EM {
+            width: 10em;
+            /* EM: Unidade RELATIVA/VARIÁVEL de acordo com o font size do elemnto pai. ATENÇÃO: Se possivel não use esta medida em novos projetos */
+        }
+
+        .container-2 {
+            font-size: 20px;
+            /* O tamanho que colocamos na regra acima depende do valor declarado do font size desta regra (elemento pai) */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Comparando as diferentes unidaddes de medida</h1>
+    <hr>
+    <div id="container">
+        <p><i>Este é o elemento <b>PAI</b></i></p>
+        <div class="caixa exemplo-pixels">
+            <p>Aqui usamos <b>pixels</b></p>
+        </div>
+
+        <div class="caixa exemplo-porcentagem">
+            <p>Aqui usamos <b>porcentagem</p></b>
+        </div>
+
+        <div class="caixa exemplo-REM">
+            <p>Aqui usamos <b>REM</b></p>
+        </div>
+
+        <div class="caixa exemplo-VW">
+            <p>Aqui usamos <b>VW</b></p>
+        </div>
+
+        <div class="container-2">
+            <div class="caixa exemplo-EM">
+                <p>Aqui usamos <b>EM</b></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="caixa exemplo-VH">
+        <p>Aqui usamos <b>VH</b></p>
+    </div>
+</body>
+
+</html>
